@@ -18,7 +18,6 @@ export class PlantService {
 export class ZipService {
   async getZip(zipCode) {
     try {
-      // let zipResponse = await fetch(`https://c0bra.api.stdlib.com/zipcode-to-hardiness-zone/?zipcode=${zipCode}`);
       let zipResponse = await fetch(`https://phzmapi.org/${zipCode}.json`);
       let jsonifiedZipResponse;
       if (zipResponse.ok && zipResponse.status === 200) {
@@ -26,7 +25,6 @@ export class ZipService {
       } else {
         jsonifiedZipResponse = false;
       }
-      // console.log(jsonifiedZipResponse);
       return jsonifiedZipResponse;
     } catch(error) {
       return false;
