@@ -2,7 +2,7 @@ body {
   /* background-image: url(https://images.pexels.com/photos/1420008/pexels-photo-1420008.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260); */
   background-repeat: no-repeat;
   background-size: 100%;
-  background-color: rgb(0, 63, 21);
+  background-color: whitesmoke;
   text-align: center;
   color: #ceb3a2;
   font-family: 'Merriweather', serif;
@@ -12,6 +12,11 @@ h1 {
   font-size: 5em;
   text-shadow: 3px 3px tomato;
   font-family: 'Modak', cursive;
+  -webkit-text-stroke: 1px black;
+}
+
+.btn {
+  margin-bottom: 2%;
 }
 
 .jumbotron {
@@ -35,6 +40,7 @@ h1 {
 }
 
 .tablink {
+  background-color: white;
   float: left;
   border: none;
   border-radius: 5px;
@@ -46,7 +52,8 @@ h1 {
 }
 
 .tablink:hover {
-  background-color: tomato;
+  background-color: darkslategray;
+  color: whitesmoke;
 }
 
 .tabcontent {

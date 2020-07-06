@@ -17,6 +17,7 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
 * Open the project up in Visual Code Studio.
 * In your terminal run 'npm install'.
 * To build the project run 'npm run build'
+* To start the webpack server 'npm run start'
 
 ## Specs
 
