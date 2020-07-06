@@ -5,6 +5,10 @@
   <script src="main.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap');
+  </style>
   <title>Garden Planner TM</title>
 </head>
 <body>
@@ -34,7 +38,7 @@
       <h1>Definitions</h1>
       <ul>Drought Tolerant</ul>
         <p>Drought tolerance is the ability to which a plant maintains its biomass production during arid or drought conditions. Some plants are naturally adapted to dry conditions, surviving with protection mechanisms such as desiccation tolerance, detoxification, or repair of xylem embolism.</p>
-      <ul>Native Planrts</ul>
+      <ul>Native Plants</ul>
         <p>Native plants are plants indigenous to a given area in geologic time. This includes plants that have developed, occur naturally, or existed for many years in an area.
         </p>
       <ul>Pollinator Attracting</ul>
@@ -47,14 +51,14 @@
       <ul>Shade Tolerant</ul>
         <p>In ecology, shade tolerance refers to a plant's ability to tolerate low light levels. The term is also used in horticulture and landscaping, although in this context its use is sometimes imprecise, especially in labeling of plants for sale in commercial nurseries.</p>
     </div>
-    <button class="tablink" onclick="tabs" id="defaultOpen">About</button>
-    <button class="tablink" onclick="tabs">Resources</button>
-    <button class="tablink" onclick="tabs">Saved Lists</button>
-    <button class="tablink" onclick="tabs">Definitions</button>
+    <button class="tablink" onclick="openTabs('about',this)" id="defaultOpen">About</button>
+    <button class="tablink" onclick="openTabs('resources',this)">Resources</button>
+    <button class="tablink" onclick="openTabs('savedLists',this)">Saved Lists</button>
+    <button class="tablink" onclick="openTabs('definitions',this)">Definitions</button>
     <br>
     <div class="row">
       <div class="col-6-md container">
-      <h3>Zip code finder for hardiness zone </h3>
+      <h3>Find Your USDA Hardiness Zone:</h3>
         <form id="area">
           <div class="form-group">
             <label for="zip-code">Enter your Zip Code:</label>
@@ -62,6 +66,7 @@
           </div>
           <button type="button" class="btn btn-outline-dark">Submit!</button>
         </form>
+        <div id="showZip"></div>
       </div>
       <div class="col-6-md container">
       <h3>Create a plant list based on zone</h3>

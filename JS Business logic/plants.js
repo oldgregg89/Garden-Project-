@@ -4,7 +4,7 @@ export class PlantService {
       let response = await fetch(`https://trefle.io/api/plants?token=${process.env.API_KEY}&drought_tolerance=medium`);
       let jsonifiedResponse;
       if (response.ok && response.status == 200) {
-        jsonifiedResponse = await response.join();
+        jsonifiedResponse = await response.json();
       } else {
         jsonifiedResponse = false;
       }
@@ -15,17 +15,18 @@ export class PlantService {
   }
 }
 
-
 export class ZipService {
-  async getZip() {
+  async getZip(zipCode) {
     try {
-      let zipResponse = await fetch(`https://c0bra.api.stdlib.com/zipcode-to-hardiness-zone/?zipcode=${zipcode}`);
+      // let zipResponse = await fetch(`https://c0bra.api.stdlib.com/zipcode-to-hardiness-zone/?zipcode=${zipCode}`);
+      let zipResponse = await fetch(`https://phzmapi.org/${zipCode}.json`);
       let jsonifiedZipResponse;
       if (zipResponse.ok && zipResponse.status === 200) {
-        jsonifiedZipResponse = await zipResponse.join();
+        jsonifiedZipResponse = await zipResponse.json();
       } else {
         jsonifiedZipResponse = false;
       }
+      // console.log(jsonifiedZipResponse);
       return jsonifiedZipResponse;
     } catch(error) {
       return false;
