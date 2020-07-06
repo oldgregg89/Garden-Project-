@@ -12,18 +12,58 @@
     <div class="jumbotron">
       <h1>Garden Planner ™</h1>
     </div>
+    <div id="about" class="tabcontent">
+      <h1>About</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis orci a scelerisque purus. Congue quisque egestas diam in arcu cursus euismod. Id faucibus nisl tincidunt eget nullam non. Urna neque viverra justo nec ultrices. Tincidunt lobortis feugiat vivamus at augue eget arcu dictum. Mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget. Morbi non arcu risus quis varius quam quisque id diam. Elit pellentesque habitant morbi tristique senectus et netus. Integer enim neque volutpat ac tincidunt. Malesuada fames ac turpis egestas sed tempus urna et pharetra. Vulputate ut pharetra sit amet aliquam id diam maecenas. Sed libero enim sed faucibus turpis. Mattis pellentesque id nibh tortor. Id diam vel quam elementum pulvinar etiam.</p>
+    </div>
+    <div id="resources" class="tabcontent">
+      <h1>Resources on how to:</h1>
+      <ol><a href="https://www.uidaho.edu/-/media/UIdaho-Responsive/Files/Extension/county/Clearwater/Workshops/Timber-Sale-Handouts/Estimating-Soil-Moisture-by-Feel-and-Appearance.pdf?la=en&hash=2C00A79F2DC5B759F3E1D48373725CA88791D315#:~:text=Wet%2C%20forms%20a%20ball%2C%20uneven,on%20fingers%2C%20slick%20and%20sticky.">Check watering cycles (finger method)</a></ol>
+      <ol><a href="https://www.uidaho.edu/-/media/UIdaho-Responsive/Files/Extension/county/Clearwater/Workshops/Timber-Sale-Handouts/Estimating-Soil-Moisture-by-Feel-and-Appearance.pdf?la=en&hash=2C00A79F2DC5B759F3E1D48373725CA88791D315#:~:text=Wet%2C%20forms%20a%20ball%2C%20uneven,on%20fingers%2C%20slick%20and%20sticky.">Prune plants</a></ol>
+      <ol><a href="https://mahtabrasheed.wordpress.com/2012/11/14/steps-a-farmer-performs-and-what-information-is-required-at-each-step/">Understand crop cycles</a></ol>
+      <ol><a href="https://www.soils4teachers.org/chemistry">Understand soil compounds</a></ol>
+      <ol><a href="https://www.lsuagcenter.com/articles/connected/layering-in-soils">Create soil layering</a></ol>
+      <ol><a href="https://youtu.be/MBIYebUgVVI">Create raised beds</a></ol>
+      <ol><a href="https://aeroponicsdiy.com/stages-of-plant-growth/">Understand grow cycles</a></ol>
+    </div>
+    <div id="SavedLists" class="tabcontent">
+      <h1>Saved Lists</h1>
+      <p></p>
+    </div>
+    <div id="definitions" class="tabcontent">
+      <h1>Definitions</h1>
+      <ul>Drought Tolerant</ul>
+        <p>Drought tolerance is the ability to which a plant maintains its biomass production during arid or drought conditions. Some plants are naturally adapted to dry conditions, surviving with protection mechanisms such as desiccation tolerance, detoxification, or repair of xylem embolism.</p>
+      <ul>Native Planrts</ul>
+        <p>Native plants are plants indigenous to a given area in geologic time. This includes plants that have developed, occur naturally, or existed for many years in an area.
+        </p>
+      <ul>Pollinator Attracting</ul>
+        <p>Most plants depend on pollinators to move the pollen from one flower to the next, while others rely on wind or water to move pollen. Plants produce nectar to attract pollinators. As the pollinator moves from flower to flower collecting nectar, they are also moving pollen from flower to flower.
+        </p>
+      <ul>Frost Resistant Plants</ul>
+        <p>Frost plants are tolerant of light freezes and can usually withstand such temperatures without serious physical injury. Non-hardy plants and frost can damage tender green tissues or even kill the root system.</p>
+      <ul>Fruit Bearing Plants</ul>
+        <p>Fruit-bearing plants are the glory of the garden. Not only do they add beauty to the landscape, but they also produce edible fruits. Fruits, by definition, are edible crops containing seeds, and they include berries, grapes, tree fruits, melons and even some crops usually thought of as vegetables.</p>
+      <ul>Shade Tolerant</ul>
+        <p>In ecology, shade tolerance refers to a plant's ability to tolerate low light levels. The term is also used in horticulture and landscaping, although in this context its use is sometimes imprecise, especially in labeling of plants for sale in commercial nurseries.</p>
+    </div>
+    <button class="tablink" onclick="tabs" id="defaultOpen">About</button>
+    <button class="tablink" onclick="tabs">Resources</button>
+    <button class="tablink" onclick="tabs">Saved Lists</button>
+    <button class="tablink" onclick="tabs">Definitions</button>
+    <br>
     <div class="row">
-      <div class="col-6-lg container">
+      <div class="col-6-md container">
       <h3>Zip code finder for hardiness zone </h3>
-      <form id="area">
-        <div class="form-group">
-          <label for="zip-code">Enter your Zip Code:</label>
-          <input type="text" id="zip-code" class="form-control">
-        </div>
-        <button type="button" class="btn btn-outline-dark">Submit!</button>
-      </form>
+        <form id="area">
+          <div class="form-group">
+            <label for="zip-code">Enter your Zip Code:</label>
+            <input type="text" id="zip-code" class="form-control">
+          </div>
+          <button type="button" class="btn btn-outline-dark">Submit!</button>
+        </form>
       </div>
-      <div class="col-6-lg container">
+      <div class="col-6-md container">
       <h3>Create a plant list based on zone</h3>
       </div>
     </div>

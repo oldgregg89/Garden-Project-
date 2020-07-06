@@ -3,11 +3,12 @@ body {
   background-repeat: no-repeat;
   background-size: 1800px 1400px;
   text-align: center;
-  color: #F37121;
+  color: #ceb3a2;
 }
 
 h1 {
   font-size: 5em;
+  text-shadow: 3px 3px tomato;
 }
 
 .jumbotron {
@@ -46,4 +47,24 @@ h1 {
 
 .btn {
   margin-bottom: 2%;
+}
+
+.tablink {
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+.tabcontent {
+  display: none;
+  padding: 50px;
+  text-align: center;
 }
