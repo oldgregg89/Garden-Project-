@@ -11,7 +11,6 @@ $(document).ready(function() {
 
     (async () => {
       let newZipCode = new ZipService();
-      // console.log(newZipCode);
       let response = await newZipCode.getZip(zipCode);
       getElements(zipCode, response);
     })();

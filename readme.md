@@ -1,13 +1,21 @@
 # _Garden Project_
 
-#### _{Brief description of application}, 2020 ver 1.0_
+#### _This application is used as a garden planner for people just starting out, 2020 ver 1.0_
 
 #### By _Ian Gregg & Kevin Davis & Ben Russell & Joseph Pearce & Sean Downs_
 [Garden-project](https://github.com/oldgregg89/Garden-Project-)
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_Help a user decide which plants are best for their location (zip code) and condition (soil type, shade, direction of sun, water frequency). They will be able to choose if they want drought tolerant plants or native plants or plants that flower during different seasons. This application will take advantage of data from the USDA and the Trefle API for plants to return results based on plain english questions to the user about what kind of garden they would like to have._
+
+User Input:
+-- zip code [open field]
+return zone, temperature --> results from these variables
+-- condition [dropdowns: soil type, shade, water frequency]
+-- make selections - checkboxes [drought tolerant, native plants, flowering plants, ]
+
+
 
 ## Setup/Installation Requirements
 
@@ -23,9 +31,9 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
 
 | Behavior    | Input | Output |
 | :---------- | ----- | -----: |
-| behavior 1 |  |  |
-| behavior 2 |  |   |
-| behavior 3 |  |  |
+| 1. Take in user input of their zip code to get the hardiness zone from our API | enter zip code 'example:97321' | 'Your Zip is 97321 and your zone is 8b which is a temperature range of 15 to 20°F' |
+| 2. Take user input of certain plants they want to include | enter example 'tomato' | return 'garden tomato' |
+| 3.  |  |  |
 | behavior 4 |  |  |
 
 
