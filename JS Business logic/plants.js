@@ -1,7 +1,9 @@
 export class PlantService {
   async getPlant() {
     try {
-      let response = await fetch(`https://trefle.io/api/plants?token=${process.env.API_KEY}&drought_tolerance=medium`);
+      let response = await fetch(
+        `https://trefle.io/api/plants?token=${process.env.API_KEY}&complete_data=true&temperature_minimum_deg_f=32`
+      );
       let jsonifiedResponse;
       if (response.ok && response.status == 200) {
         jsonifiedResponse = await response.json();
@@ -9,8 +11,16 @@ export class PlantService {
         jsonifiedResponse = false;
       }
       return jsonifiedResponse;
-    } catch(error) {
+    } catch (error) {
       return false;
+    }
+  }
+}
+
+export class PlantDescription {
+  async getInfo() {
+    try {
+      let plantData = 
     }
   }
 }
@@ -26,8 +36,25 @@ export class ZipService {
         jsonifiedZipResponse = false;
       }
       return jsonifiedZipResponse;
-    } catch(error) {
+    } catch (error) {
       return false;
     }
   }
 }
+
+// export class PlantService2 {
+//   async getPlant() {
+//     try {
+//       let response = await fetch(`https://trefle.io/api/plants?token=${process.env.API_KEY}&complete_data=true&temperature_minimum_deg_f=32`);
+//       let jsonifiedResponse;
+//       if (response.ok && response.status == 200) {
+//         jsonifiedResponse = await response.json();
+//       } else {
+//         jsonifiedResponse = false;
+//       }
+//       return jsonifiedResponse;
+//     } catch(error) {
+//       return false;
+//     }
+//   }
+// }
