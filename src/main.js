@@ -6,8 +6,24 @@ import { ZipService } from "./../JS Business logic/plants.js";
 import { PlantService } from "./../JS Business logic/plants.js";
 import { PlantDescription } from "./../JS Business logic/plants.js";
 
-$(document).ready(function () {
-  $(".btn").click(function (event) {
+$(document).ready(function() {
+  $('#buttonAbout').click(function() {
+    $('#about').show();
+    $('#resources,#savedLists,#definitions').hide();
+  });
+  $('#buttonResources').click(function() {
+    $('#resources').show();
+    $('#savedLists,#about,#definitions').hide();
+  });
+  $('#buttonSavedLists').click(function() {
+    $('#savedLists').show();
+    $('#definitions,#resources,#about').hide();
+  });
+  $('#buttonDefinitions').click(function() {
+    $('#definitions').show();
+    $('#savedLists,#resources,#about').hide();
+  });
+  $(".btn").click(function(event){
     event.preventDefault();
     let zipCode = $("#zip-code").val();
 
@@ -20,11 +36,10 @@ $(document).ready(function () {
 
     function getElements(zipCode, response) {
       if (response) {
-        $(`#showZip`).text(
-          `Your Zip is ${zipCode} and your zone is ${response.zone} which is a temperature range of ${response.temperature_range}°F`
-        );
+        $(`#showZip`).text(`Your Zip is ${zipCode} and your zone is ${response.zone} which is a temperature range of ${response.temperature_range}°F`);
+        $('#showMap').show();
       } else {
-        $(`#showZip`).text(`something else - error`);
+        $(`#showZip`).text(`Error - please check your zipcode.`);
       }
     }
 

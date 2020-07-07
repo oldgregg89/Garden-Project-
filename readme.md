@@ -9,27 +9,6 @@
 
 _Help a user decide which plants are best for their location (zip code) and condition (soil type, shade, direction of sun, water frequency). They will be able to choose if they want drought tolerant plants or native plants or plants that flower during different seasons. This application will take advantage of data from the USDA and the Trefle API for plants to return results based on plain english questions to the user about what kind of garden they would like to have._
 
-User Input:
--- zip code [open field]
-return zone, temperature --> results from these variables
-(1,626 - complete true, temp range 30-35)
--- condition [dropdowns: soil type, shade, water frequency]
--- make selections - checkboxes [drought tolerant, native plants, flowering plants, ]
-
-zip code - zone, temp range
-zipeCode[];
-
-complete true - 
-temp range
-return - a list of objects with arrays
-
-print the first 5 items to the DOM
-
-User selects one of these 
--- then print additional info
-
-
-
 ## Setup/Installation Requirements
 
 
