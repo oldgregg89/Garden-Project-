@@ -3,6 +3,7 @@
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="main.js"></script>
+  <script src="./../JS Business logic/headertabs.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
@@ -18,7 +19,7 @@
     </div>
     <div id="about" class="tabcontent">
       <h1>About</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis orci a scelerisque purus. Congue quisque egestas diam in arcu cursus euismod. Id faucibus nisl tincidunt eget nullam non. Urna neque viverra justo nec ultrices. Tincidunt lobortis feugiat vivamus at augue eget arcu dictum. Mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget. Morbi non arcu risus quis varius quam quisque id diam. Elit pellentesque habitant morbi tristique senectus et netus. Integer enim neque volutpat ac tincidunt. Malesuada fames ac turpis egestas sed tempus urna et pharetra. Vulputate ut pharetra sit amet aliquam id diam maecenas. Sed libero enim sed faucibus turpis. Mattis pellentesque id nibh tortor. Id diam vel quam elementum pulvinar etiam.</p>
+      <p>This Application helps a user decide which plants are best for their location (zip code) and condition (soil type, shade, direction of sun, water frequency). They will be able to choose if they want drought tolerant plants or native plants or plants that flower during different seasons. This application will take advantage of data from the USDA and the Trefle API for plants to return results based on plain english questions to the user about what kind of garden they would like to have.</p>
     </div>
     <div id="resources" class="tabcontent">
       <h1>Resources on how to:</h1>
@@ -30,7 +31,7 @@
       <ol><a href="https://youtu.be/MBIYebUgVVI">Create raised beds</a></ol>
       <ol><a href="https://aeroponicsdiy.com/stages-of-plant-growth/">Understand grow cycles</a></ol>
     </div>
-    <div id="SavedLists" class="tabcontent">
+    <div id="savedLists" class="tabcontent">
       <h1>Saved Lists</h1>
       <p></p>
     </div>
@@ -51,10 +52,10 @@
       <ul>Shade Tolerant</ul>
         <p>In ecology, shade tolerance refers to a plant's ability to tolerate low light levels. The term is also used in horticulture and landscaping, although in this context its use is sometimes imprecise, especially in labeling of plants for sale in commercial nurseries.</p>
     </div>
-    <button class="tablink" onclick="openTabs('about',this)" id="defaultOpen">About</button>
-    <button class="tablink" onclick="openTabs('resources',this)">Resources</button>
-    <button class="tablink" onclick="openTabs('savedLists',this)">Saved Lists</button>
-    <button class="tablink" onclick="openTabs('definitions',this)">Definitions</button>
+    <button class="tablink" onclick="openTabs('about')" id="defaultOpen">About</button>
+    <button class="tablink" onclick="openTabs('resources')">Resources</button>
+    <button class="tablink" onclick="openTabs('savedLists')">Saved Lists</button>
+    <button class="tablink" onclick="openTabs('definitions')">Definitions</button>
     <br>
     <div class="row">
       <div class="col-6-md container">

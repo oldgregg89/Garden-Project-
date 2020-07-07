@@ -1,14 +1,10 @@
-export function openTabs() {
-  var i, tabcontent, tablinks;
+function openTabs(tabName, tabcontent) {
+  var i, tabcontent, .tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById().style.display = "block";
-
-  elmnt.style.backgroundColor = color;
+  document.getElementById(tabName).style.display = "block";
 }
+
+document.getElementById("defaultOpen").click();

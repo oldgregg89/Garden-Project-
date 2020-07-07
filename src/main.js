@@ -10,8 +10,7 @@ $(document).ready(function() {
     let zipCode = $("#zip-code").val();
 
     (async () => {
-      let newZipCode = new ZipService();
-      let response = await newZipCode.getZip(zipCode);
+      let newZipCode = new ZipService();Code.getZip(zipCode);
       getElements(zipCode, response);
     })();
 
