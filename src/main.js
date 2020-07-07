@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import $ from "jquery";
 import { ZipService } from './../JS Business logic/plants.js';
+import { PlantService } from './../JS Business logic/plants.js'
 
 $(document).ready(function() {
   $(".btn").click(function(event){
@@ -21,6 +22,13 @@ $(document).ready(function() {
       } else {
         $(`#showZip`).text(`something else - error`);
       }
-    }    
+    }  
+    
+    (async () => {
+      let plantsReturn = new PlantService();
+      let plantsResponse = await plantsReturn.getPlant()
+      console.log(plantsResponse)
+    })();  
+
   });
 });
