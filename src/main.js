@@ -15,7 +15,7 @@ $(document).ready(function() {
     })();
 
     function getElements(zipCode, response) {
-      if (response) {
+      if (response) {xxxxxxxxx
         $(`#showZip`).text(`Your Zip is ${zipCode} and your zone is ${response.zone} which is a temperature range of ${response.temperature_range}°F`);
       } else {
         $(`#showZip`).text(`something else - error`);
