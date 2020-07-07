@@ -82,6 +82,11 @@ input {
   display: inline-block;
 }
 
+
 output {
   display: inline;
+}
+
+#showMap {
+  display: none;
 }
