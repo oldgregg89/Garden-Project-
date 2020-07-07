@@ -69,8 +69,13 @@ h3 {
 }
 
 .tabcontent {
+  display: none;
   padding: 50px;
   text-align: center;
+}
+
+.map-img {
+  margin: 2%;
 }
 
 input {
@@ -90,3 +95,4 @@ output {
 #showMap {
   display: none;
 }
+

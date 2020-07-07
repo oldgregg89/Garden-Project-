@@ -1,11 +1,16 @@
-function openTabs(tabcontent) {
-  var i, tabcontent,
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  document.getElementById(tabcontent).style.display = "block";
-
+export function openTabs() {
+  $(document).ready(function() {
+    $('#buttonAbout').click(function() {
+      $('#about').show();
+    });
+    $('#buttonResources').click(function() {
+      $('#resources').show();
+    });
+    $('#buttonSavedLists').click(function() {
+      $('#savedLists').show();
+    });
+    $('#buttonDefinitions').click(function() {
+      $('#definitions').show();
+    });
+  });
 }
-
-document.getElementById("defaultOpen").click();
