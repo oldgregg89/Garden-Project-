@@ -1,5 +1,4 @@
 body {
-  /* background-image: url(https://images.pexels.com/photos/1420008/pexels-photo-1420008.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260); */
   background-repeat: no-repeat;
   background-size: 100%;
   background-color: whitesmoke;
@@ -11,6 +10,13 @@ body {
 h1 {
   color: burlywood;
   font-size: 7em;
+  text-shadow: 3px 3px tomato;
+  font-family: 'Modak', cursive;
+  -webkit-text-stroke: 1px black;
+}
+
+h2 {
+  color: burlywood;
   text-shadow: 3px 3px tomato;
   font-family: 'Modak', cursive;
   -webkit-text-stroke: 1px black;
@@ -59,11 +65,10 @@ h3 {
 
 .tablink:hover {
   background-color: rgb(16, 29, 29);
-  color: whitesmoke;
+  color: white;
 }
 
 .tabcontent {
-  display: none;
   padding: 50px;
   text-align: center;
 }
@@ -75,6 +80,11 @@ input {
 #zip-code {
   width: 30%;
   display: inline-block;
+}
+
+
+output {
+  display: inline;
 }
 
 #showMap {

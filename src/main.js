@@ -10,13 +10,12 @@ $(document).ready(function() {
     let zipCode = $("#zip-code").val();
 
     (async () => {
-      let newZipCode = new ZipService();
-      let response = await newZipCode.getZip(zipCode);
+      let newZipCode = new ZipService();Code.getZip(zipCode);
       getElements(zipCode, response);
     })();
 
     function getElements(zipCode, response) {
-      if (response) {
+      if (response) {xxxxxxxxx
         $(`#showZip`).text(`Your Zip is ${zipCode} and your zone is ${response.zone} which is a temperature range of ${response.temperature_range}°F`);
         $('#showMap').show();
       } else {
