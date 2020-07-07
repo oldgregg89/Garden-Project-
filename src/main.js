@@ -18,8 +18,9 @@ $(document).ready(function() {
     function getElements(zipCode, response) {
       if (response) {
         $(`#showZip`).text(`Your Zip is ${zipCode} and your zone is ${response.zone} which is a temperature range of ${response.temperature_range}°F`);
+        $('#showMap').show();
       } else {
-        $(`#showZip`).text(`something else - error`);
+        $(`#showZip`).text(`Error - please check your zipcode.`);
       }
     }    
   });
