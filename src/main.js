@@ -1,9 +1,10 @@
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles.css';
+import "bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles.css";
 import $ from "jquery";
-import { ZipService } from '../JSBusinesslogic/plants.js';
-import { openTabs } from '../JSBusinesslogic/headertabs.js';
+import { ZipService } from "./../JS Business logic/plants.js";
+import { PlantService } from "./../JS Business logic/plants.js";
+import { PlantDescription } from "./../JS Business logic/plants.js";
 
 $(document).ready(function() {
   $('#buttonAbout').click(function() {
@@ -30,6 +31,7 @@ $(document).ready(function() {
       let newZipCode = new ZipService();
       let response = await newZipCode.getZip(zipCode);
       getElements(zipCode, response);
+      console.log(zipCode, response);
     })();
 
     function getElements(zipCode, response) {
@@ -39,6 +41,13 @@ $(document).ready(function() {
       } else {
         $(`#showZip`).text(`Error - please check your zipcode.`);
       }
-    }    
+    }
+
+    (async () => {
+      let plantsReturn = new PlantService();
+      let plantsResponse = await plantsReturn.getPlant();
+      showPlants(plantsResponse);
+      console.log(plantsResponse);
+    })();
   });
 });
