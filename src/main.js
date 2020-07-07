@@ -4,6 +4,7 @@ import "./styles.css";
 import $ from "jquery";
 import { ZipService } from "./../JS Business logic/plants.js";
 import { PlantService } from "./../JS Business logic/plants.js";
+import { PlantDescription } from "./../JS Business logic/plants.js";
 
 $(document).ready(function () {
   $(".btn").click(function (event) {
@@ -33,44 +34,5 @@ $(document).ready(function () {
       showPlants(plantsResponse);
       console.log(plantsResponse);
     })();
-
-// zip code - zone, temp range
-
-// complete true - 
-// temp = 32
-// return - a list of objects with arrays
-
-// http://trefle.io/api/plants/126957
-
-// "temperature_minimum": {
-//   "deg_c": -33.333333333333336,
-//   "deg_f": -28.0
-
-// "growth": {
-//   "anaerobic_tolerance": "None",
-//   "caco_3_tolerance": "Medium",
-//   "cold_stratification_required": null,
-//   "drought_tolerance": "Medium",
-
-// print the first 5 items to the DOM
-
-    // function showPlants(plantsResponse) {
-    //   if (plantsResponse) {
-    //     $("#show-plants").text(
-    //       `Heres a response ${plantsResponse[0].common_name}`
-    //     );
-    //   } else {
-    //     $(`#show-plants`).text(`plant api error`);
-    //   }
-    // }
-
-    // (async () => {
-    //   let plantsReturn = new PlantService2();
-    //   let plantsResponse = await plantsReturn.getPlant();
-    //   showPlants(plantsResponse);
-    //   console.log(plantsResponse);
-    // })();
-
-
   });
 });
