@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="main.js"></script>
-  <script src="./../JS Business logic/headertabs.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
@@ -43,7 +40,7 @@
         <ul>Native Plants</ul>
           <p>Native plants are plants indigenous to a given area in geologic time. This includes plants that have developed, occur naturally, or existed for many years in an area.
           </p>
-        <ul>Pollinator Attracting</ul>
+        <ul>Attracting</ul>
           <p>Most plants depend on pollinators to move the pollen from one flower to the next, while others rely on wind or water to move pollen. Plants produce nectar to attract pollinators. As the pollinator moves from flower to flower collecting nectar, they are also moving pollen from flower to flower.
           </p>
         <ul>Frost Resistant Plants</ul>
@@ -53,10 +50,10 @@
         <ul>Shade Tolerant</ul>
           <p>In ecology, shade tolerance refers to a plant's ability to tolerate low light levels. The term is also used in horticulture and landscaping, although in this context its use is sometimes imprecise, especially in labeling of plants for sale in commercial nurseries.</p>
       </div>
-      <button class="tablink" onclick="openTabs('about')" id="defaultOpen">About</button>
-      <button class="tablink" onclick="openTabs('resources')">Resources</button>
-      <button class="tablink" onclick="openTabs('savedLists')">Saved Lists</button>
-      <button class="tablink" onclick="openTabs('definitions')">Definitions</button>
+      <button id="buttonAbout" class="tablink">About</button>
+      <button id="buttonResources" class="tablink">Resources</button>
+      <button id="buttonSavedLists" class="tablink">Saved Lists</button>
+      <button id="buttonDefinitions" class="tablink">Definitions</button>
     </div>
     <br>
     <div class="row">
@@ -70,9 +67,19 @@
           <button type="button" class="btn btn-outline-dark">Submit!</button>
         </form>
         <div id="showZip"></div>
+        <div id="showMap"><img class="map-img" src="https://planthardiness.ars.usda.gov/PHZMWeb/images_ui/homepage_map.jpg"></div>
       </div>
       <div class="col-6-md container">
       <h3>Create a plant list based on zone</h3>
+      <form>
+      <label>How capable are you of watering regularly? Is that something you like to do?</label>
+      <input list="water" name="water" type="text" id="inputWater" required>
+      <datalist id="water">
+        <option value="High">I love to be in the garden. Hose in hand.</option>
+        <option value="Medium">If the weather is nice that's probably where I'll be.</option>
+        <option value="Low">I prefer to "set it and forget it!"</option>
+      </datalist>
+      </form>
       </div>
     </div>
   </div>

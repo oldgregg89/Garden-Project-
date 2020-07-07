@@ -69,8 +69,13 @@ h3 {
 }
 
 .tabcontent {
+  display: none;
   padding: 50px;
   text-align: center;
+}
+
+.map-img {
+  margin: 2%;
 }
 
 input {
@@ -82,6 +87,15 @@ input {
   display: inline-block;
 }
 
+
 output {
   display: inline;
+}
+
+#showMap {
+  display: none;
+}
+
+ul {
+  text-emphasis-style: bold;
 }
