@@ -4,6 +4,7 @@ import "./styles.css";
 import $ from "jquery";
 import { ZipService } from "./../JS Business logic/plants.js";
 import { PlantService } from "./../JS Business logic/plants.js";
+
 // import { PlantDescription } from "./../JS Business logic/plants.js";
 
 $(document).ready(function() {
@@ -40,25 +41,32 @@ $(document).ready(function() {
         $(`#showZip`).text(`Error - please check your zipcode.`);
       }
     }
-
   });
   $("#plant-btn").click(function(){
-    
+    let containerProp = $('#hometype').val();
+    let flowers = $('#flower').val();
+    let water = $('#water').val();
+    let life = $('#life').val();
+    let shade = $('#shade').val();
     (async () => {
       let plantsReturn = new PlantService();
-      let plantsResponse = await plantsReturn.getPlant();
+      let plantsResponse = await plantsReturn.getPlant(containerProp, flowers, water, life, shade);
       showPlants(plantsResponse);
       console.log(plantsResponse);
     })();
 
     function showPlants(plantsResponse) {
       if (plantsResponse) {
-        $(".plant-output").text(`Here is a list of plants ${plantsResponse[1].common_name} ${plantsResponse[2].common_name} ${plantsResponse[3].common_name}`);
+        $(".plant-output").text(`Here is a list of plants ${plantsResponse[1].common_name} ${plantsResponse[2].common_name} ${plantsResponse[3].common_name} ${plantsResponse[4].common_name} ${plantsResponse[5].common_name}`);
       } else {
         $(".plant-output").text(`Error`);
       }
     }
   });
+  $("#saveList-btn").click(function() {
+    myStorage = window.localStorage;
+    let lists_serialized = JSON.stringify(lists);
+    localStorage.setitem("lists",lists_serialized);
+    let lists_deserislized = JSON.parse(localStorage.getitem("lists"))
+  });
 });
-
-// myStorage = window.localStorage;
