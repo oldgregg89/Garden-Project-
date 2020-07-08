@@ -1,4 +1,4 @@
-#<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,14 +7,106 @@
     @import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap');
   </style>
-  <title>Garden Planner TM</title>
+  <title>HOME TEEM</title>
 </head>
 <body>
   <div class="container">
-    <div class="jumbotron">
-      <h1>SPROUT 'EM™</h1>
-    </div>
-    <div class="tabcontainer">
+  <img id="icon" src="https://d338t8kmirgyke.cloudfront.net/icons/icon_pngs/000/003/089/original/sprout.png">
+  <h1>HOME TEEM</h1>
+  <h1></h1>
+  <h2>We're rooting for you!</h2>
+  <br>
+  <button id="buttonAbout" class="tablink">About</button>
+  <button id="buttonResources" class="tablink">Resources</button>
+  <button id="buttonDefinitions" class="tablink">Definitions</button>
+  <button id="buttonSavedLists" class="tablink">Lists</button>
+  </div>
+  <div class="container" id="content">
+        <h3>Find Your USDA Hardiness Zone</h3>
+          <form id="area">
+              <label for="zip-code">Enter your Zip Code:</label>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control">
+                <div class="input-group-append">
+                  <button class="btn btn-dark" type="button">SUBMIT</button>
+                </div>
+              </div>
+          </form>
+          <div id="showZip"></div>
+          <div id="show-plants"></div>
+          <div id="showMap"><img class="map-img" src="https://planthardiness.ars.usda.gov/PHZMWeb/images_ui/homepage_map.jpg"></div>
+        <h3>Create a plant list based on you and your zone!</h3>
+        <form>
+        <!-- Propagated By Container -->
+        <label>Container or flowerbed?</label>
+        <select id="hometype"class="form-control">
+          <option value="Yes">These are indoor homies.</option>
+          <option value="No">Ready for the wild.</option>
+        </select>
+        <!-- Flower Conspicuous -->
+        <label>Are you looking for flower friends?</label>
+        <select id="flower"class="form-control">
+          <option value="Yes">Let em bloom.</option>
+          <option value="No">I like to keep things green and that's it.</option>
+        </select>
+        <!-- Moisture Use -->
+        <label>How capable are you of watering regularly? Is that something you like to do?</label>
+        <select id="water"class="form-control">
+          <option value="Low">I love to be in the garden. Hose in hand.</option>
+          <option value="Medium">If the weather is nice that's probably where I'll be.</option>
+          <option value="High">I prefer to "set it and forget it!"</option>
+        </select>
+        <!-- Active Growth Period -->
+        <label>What season are you interested in seeing the most growth?</label>
+        <div class="form-group row-md-4">
+        <select id="season" class="form-control">
+          <option value="Spring">Spring</option>    
+          <option value="Spring-Fall">Spring & Fall</option>
+          <option value="Spring-Summer">Spring & Summer</option>
+          <option value="Spring-Summer-Fall">Spring, Summer & Fall</option>
+          <option value="Summer">Summer</option>
+          <option value="Summer-Fall">Summer & Fall</option>
+          <option value="Fall">Fall</option>
+          <option value="Fall-Winter-Spring">Fall, Winter & Spring</option>
+          <option value="Year-round">Year-round</option>
+        </select>
+        <!-- Lifespan -->
+        <label>How long would you like to keep these plants?</label>
+        <select id="life" class="form-control">
+          <option value="Short">One season will be lucky</option>    
+          <option value="Moderate">We plant to live here awhile</option>
+          <option value="Long">A grip</option>
+        </select>
+        <!-- Shade Tolerance -->
+        <label>How much shade do you have near the area you are planting?</label>
+        <select id="shade" class="form-control">
+          <option value="Tolerant">Lots of shade</option>    
+          <option value="Intermediate">Even sun to shade</option>
+          <option value="Intolerant">Full sun all day</option>
+        </select>
+        <!-- Drought Tolerance -->
+        <label>How durable do you want these plants to be?</label>
+        <select id="durabilty" class="form-control">
+          <option value="None">Weaklings</option>    
+          <option value="Low">They alright</option>
+          <option value="Medium">Pretty chill</option>
+          <option value="High">Chilling hard</option>
+        </select>
+        <!-- Vegetative Spread Rate -->
+        <label>At what rate can this plant can spread compared to other species with the same growth habit?</label>
+        <select id="vegetate" class="form-control">
+          <option value="None">None</option>    
+          <option value="Slow">Slow</option>
+          <option value="Moderate">Moderate</option>
+          <option value="Rapid">Rapid</option>
+        </select>
+        <!-- Palatable Human -->
+        <label>Does the plant produce berries, nuts, seeds, or fruits that are palatable to humans?</label>
+        <select id="fruit" class="form-control">
+          <option value="Yes">Granola farm anyone?</option>    
+          <option value="No">No</option>
+        </select>
+      </div>
       <div id="about" class="tabcontent">
         <h2>About</h2>
         <p>This Application helps a user decide which plants are best for their location (zip code) and condition (soil type, shade, direction of sun, water frequency). They will be able to choose if they want drought tolerant plants or native plants or plants that flower during different seasons. This application will take advantage of data from the USDA and the Trefle API for plants to return results based on plain english questions to the user about what kind of garden they would like to have.</p>
@@ -50,39 +142,7 @@
         <ul>Shade Tolerant</ul>
           <p>In ecology, shade tolerance refers to a plant's ability to tolerate low light levels. The term is also used in horticulture and landscaping, although in this context its use is sometimes imprecise, especially in labeling of plants for sale in commercial nurseries.</p>
       </div>
-      <button id="buttonAbout" class="tablink">About</button>
-      <button id="buttonResources" class="tablink">Resources</button>
-      <button id="buttonSavedLists" class="tablink">Saved Lists</button>
-      <button id="buttonDefinitions" class="tablink">Definitions</button>
-    </div>
-    <br>
-    <div class="row">
-      <div class="col-6-md container">
-      <h3>Find Your USDA Hardiness Zone</h3>
-        <form id="area">
-          <div class="form-group">
-            <label for="zip-code">Enter your Zip Code:</label>
-            <input type="text" id="zip-code" class="form-control">
-          </div>
-          <button type="button" class="btn btn-outline-dark">Submit!</button>
-        </form>
-        <div id="showZip"></div>
-        <div id="show-plants"></div>
-        <div id="showMap"><img class="map-img" src="https://planthardiness.ars.usda.gov/PHZMWeb/images_ui/homepage_map.jpg"></div>
-      </div>
-      <div class="col-6-md container">
-      <h3>Create a plant list based on zone</h3>
-      <form>
-      <label>How capable are you of watering regularly? Is that something you like to do?</label>
-      <input list="water" name="water" type="text" id="inputWater" required>
-      <datalist id="water">
-        <option value="High">I love to be in the garden. Hose in hand.</option>
-        <option value="Medium">If the weather is nice that's probably where I'll be.</option>
-        <option value="Low">I prefer to "set it and forget it!"</option>
-      </datalist>
       </form>
-      </div>
-    </div>
-  </div>
-</body>
+    </div>  
+  </body>
 </html>

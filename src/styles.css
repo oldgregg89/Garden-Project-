@@ -1,14 +1,13 @@
 body {
-  background-repeat: no-repeat;
-  background-size: 100%;
+  background-image: url(https://images.pexels.com/photos/113335/pexels-photo-113335.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
   background-color: whitesmoke;
-  text-align: center;
-  color: #2d1919;
+  color: black;
   font-family: 'Merriweather', serif;
 }
 
 h1 {
   color: burlywood;
+  line-height: .7em;
   font-size: 7em;
   text-shadow: 3px 3px tomato;
   font-family: 'Modak', cursive;
@@ -22,22 +21,31 @@ h2 {
   -webkit-text-stroke: 1px black;
 }
 
-h3 {
-  padding-top: 20px;
-  padding-bottom: 20px;
+#icon {
+  float: right;
+  max-width: 125px;
+  max-height: 100%;
+}
+
+#content {
+  margin-top: 6%;
+  margin-bottom: 3%;
+  padding: 2%;
+  background-color: rgba(245, 245, 245, 0.74);
+  border: solid 1px #343a40;
+  border-radius: 10px;
+}
+
+.container {
+  margin-top: 3%;
 }
 
 .btn {
   margin-bottom: 2%;
 }
 
-.jumbotron {
-  background-image: url(https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  border-style: solid b;
-  border-radius: 15px;
-  margin-top: 2%;
+.form-control {
+  margin-bottom: 5px;
 }
 
 .column {
@@ -52,11 +60,10 @@ h3 {
 }
 
 .tablink {
-  background-color: whitesmoke;
+  background-color: rgba(245, 245, 245, 0.74);
   float: left;
-  border: solid 1px #412d38;
-  border-radius: 5px;
-  outline: none;
+  border: solid 1px #343a40;
+  border-radius: 10px;
   cursor: pointer;
   padding: 14px 16px;
   font-size: 17px;
@@ -64,8 +71,8 @@ h3 {
 }
 
 .tablink:hover {
-  background-color: rgb(16, 29, 29);
-  color: white;
+  background-color: #343a40;
+  color: whitesmoke;
 }
 
 .tabcontent {
