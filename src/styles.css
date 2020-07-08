@@ -21,7 +21,13 @@ h2 {
   -webkit-text-stroke: 1px black;
 }
 
-#whole {
+#icon {
+  float: right;
+  max-width: 125px;
+  max-height: 100%;
+}
+
+#content {
   margin-top: 6%;
   margin-bottom: 3%;
   padding: 2%;
@@ -58,7 +64,6 @@ h2 {
   float: left;
   border: solid 1px #343a40;
   border-radius: 10px;
-  outline: none;
   cursor: pointer;
   padding: 14px 16px;
   font-size: 17px;
