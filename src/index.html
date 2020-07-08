@@ -26,9 +26,9 @@
           <form id="area">
               <label for="zip-code">Enter your Zip Code:</label>
               <div class="input-group mb-3">
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" id="zip-code">
                 <div class="input-group-append">
-                  <button class="btn btn-dark" type="button">SUBMIT</button>
+                  <button id="zip-btn" class="btn btn-dark" type="button">SUBMIT</button>
                 </div>
               </div>
           </form>
@@ -40,18 +40,21 @@
         <!-- Propagated By Container -->
         <label>Container or flowerbed?</label>
         <select id="hometype"class="form-control">
+          <option>Choose...</option>
           <option value="Yes">These are indoor homies.</option>
           <option value="No">Ready for the wild.</option>
         </select>
         <!-- Flower Conspicuous -->
         <label>Are you looking for flower friends?</label>
         <select id="flower"class="form-control">
+          <option>Choose...</option>
           <option value="Yes">Let em bloom.</option>
           <option value="No">I like to keep things green and that's it.</option>
         </select>
         <!-- Moisture Use -->
         <label>How capable are you of watering regularly? Is that something you like to do?</label>
         <select id="water"class="form-control">
+          <option>Choose...</option>
           <option value="Low">I love to be in the garden. Hose in hand.</option>
           <option value="Medium">If the weather is nice that's probably where I'll be.</option>
           <option value="High">I prefer to "set it and forget it!"</option>
@@ -60,6 +63,7 @@
         <label>What season are you interested in seeing the most growth?</label>
         <div class="form-group row-md-4">
         <select id="season" class="form-control">
+          <option>Choose...</option>
           <option value="Spring">Spring</option>    
           <option value="Spring-Fall">Spring & Fall</option>
           <option value="Spring-Summer">Spring & Summer</option>
@@ -73,13 +77,15 @@
         <!-- Lifespan -->
         <label>How long would you like to keep these plants?</label>
         <select id="life" class="form-control">
-          <option value="Short">One season will be lucky</option>    
-          <option value="Moderate">We plant to live here awhile</option>
-          <option value="Long">A grip</option>
+          <option>Choose...</option>
+          <option value="Short">One season will be lucky.</option>    
+          <option value="Moderate">We want to live here awhile.</option>
+          <option value="Long">This is our forever home.</option>
         </select>
         <!-- Shade Tolerance -->
         <label>How much shade do you have near the area you are planting?</label>
         <select id="shade" class="form-control">
+          <option>Choose...</option>
           <option value="Tolerant">Lots of shade</option>    
           <option value="Intermediate">Even sun to shade</option>
           <option value="Intolerant">Full sun all day</option>
@@ -87,14 +93,16 @@
         <!-- Drought Tolerance -->
         <label>How durable do you want these plants to be?</label>
         <select id="durabilty" class="form-control">
+          <option>Choose...</option>
           <option value="None">Weaklings</option>    
-          <option value="Low">They alright</option>
+          <option value="Low">They're alright</option>
           <option value="Medium">Pretty chill</option>
           <option value="High">Chilling hard</option>
         </select>
         <!-- Vegetative Spread Rate -->
         <label>At what rate can this plant can spread compared to other species with the same growth habit?</label>
         <select id="vegetate" class="form-control">
+          <option>Choose...</option>
           <option value="None">None</option>    
           <option value="Slow">Slow</option>
           <option value="Moderate">Moderate</option>
@@ -103,10 +111,14 @@
         <!-- Palatable Human -->
         <label>Does the plant produce berries, nuts, seeds, or fruits that are palatable to humans?</label>
         <select id="fruit" class="form-control">
+          <option>Choose...</option>
           <option value="Yes">Granola farm anyone?</option>    
           <option value="No">No</option>
         </select>
+        <button id="plant-btn" class="btn btn-dark" type="button">SUBMIT</button>
+      </form>  
       </div>
+      <div class="plant-output"></div>
       <div id="about" class="tabcontent">
         <h2>About</h2>
         <p>This Application helps a user decide which plants are best for their location (zip code) and condition (soil type, shade, direction of sun, water frequency). They will be able to choose if they want drought tolerant plants or native plants or plants that flower during different seasons. This application will take advantage of data from the USDA and the Trefle API for plants to return results based on plain english questions to the user about what kind of garden they would like to have.</p>
@@ -142,7 +154,6 @@
         <ul>Shade Tolerant</ul>
           <p>In ecology, shade tolerance refers to a plant's ability to tolerate low light levels. The term is also used in horticulture and landscaping, although in this context its use is sometimes imprecise, especially in labeling of plants for sale in commercial nurseries.</p>
       </div>
-      </form>
     </div>  
   </body>
 </html>

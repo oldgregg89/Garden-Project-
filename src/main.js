@@ -23,7 +23,7 @@ $(document).ready(function() {
     $('#definitions').show();
     $('#savedLists,#resources,#about').hide();
   });
-  $(".btn").click(function(event){
+  $("#zip-btn").click(function(event){
     event.preventDefault();
     let zipCode = $("#zip-code").val();
 
@@ -49,5 +49,13 @@ $(document).ready(function() {
       showPlants(plantsResponse);
       console.log(plantsResponse);
     })();
+
+    function showPlants(plantsResponse) {
+      if (plantsResponse) {
+        $(".plant-output").text(`Here is a list of plants ${plantsResponse}.`);
+      } else {
+        $(".plant-output").test(`Error`);
+      }
+    }
   });
 });

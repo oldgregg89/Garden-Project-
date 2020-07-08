@@ -27,6 +27,12 @@ h2 {
   max-height: 100%;
 }
 
+button:focus { 
+  outline: none;
+  background-color: #343a40;
+  color: whitesmoke;
+}
+
 #content {
   margin-top: 6%;
   margin-bottom: 3%;
@@ -93,7 +99,6 @@ input {
   width: 30%;
   display: inline-block;
 }
-
 
 output {
   display: inline;
