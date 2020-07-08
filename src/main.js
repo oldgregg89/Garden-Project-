@@ -4,7 +4,7 @@ import "./styles.css";
 import $ from "jquery";
 import { ZipService } from "./../JS Business logic/plants.js";
 import { PlantService } from "./../JS Business logic/plants.js";
-import { PlantDescription } from "./../JS Business logic/plants.js";
+// import { PlantDescription } from "./../JS Business logic/plants.js";
 
 $(document).ready(function() {
   $('#buttonAbout').click(function() {
@@ -23,15 +23,13 @@ $(document).ready(function() {
     $('#definitions').show();
     $('#savedLists,#resources,#about').hide();
   });
-  $(".btn").click(function(event){
-    event.preventDefault();
+  $("#zip-btn").click(function() {
     let zipCode = $("#zip-code").val();
 
     (async () => {
       let newZipCode = new ZipService();
       let response = await newZipCode.getZip(zipCode);
       getElements(zipCode, response);
-      console.log(zipCode, response);
     })();
 
     function getElements(zipCode, response) {
@@ -43,11 +41,24 @@ $(document).ready(function() {
       }
     }
 
+  });
+  $("#plant-btn").click(function(){
+    
     (async () => {
       let plantsReturn = new PlantService();
       let plantsResponse = await plantsReturn.getPlant();
       showPlants(plantsResponse);
       console.log(plantsResponse);
     })();
+
+    function showPlants(plantsResponse) {
+      if (plantsResponse) {
+        $(".plant-output").text(`Here is a list of plants ${plantsResponse[1].common_name} ${plantsResponse[2].common_name} ${plantsResponse[3].common_name}`);
+      } else {
+        $(".plant-output").text(`Error`);
+      }
+    }
   });
 });
+
+// myStorage = window.localStorage;
