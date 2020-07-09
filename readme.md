@@ -6,6 +6,12 @@
 
 [Garden-project](https://github.com/oldgregg89/Garden-Project-)
 
+## Description
+
+_Help a user decide which plants are best for their location (zip code) and condition (soil type, shade, direction of sun, water frequency). They will be able to choose if they want drought tolerant plants or native plants or plants that flower during different seasons. This application will take advantage of data from the USDA and the Trefle API for plants to return results based on plain english questions to the user about what kind of garden they would like to have._
+
+* Below we have explanation of our MVP & week schedule/daily goals
+
 ![MVP & stretch goals](/assets/img/MVP&StrechGoals.png)
 
 ![Weekly schedule](/assets/img/weeklySchedule&Day2_3.png)
@@ -13,9 +19,7 @@
 ![day4](/assets/img/day4.png)
 
 
-## Description
 
-_Help a user decide which plants are best for their location (zip code) and condition (soil type, shade, direction of sun, water frequency). They will be able to choose if they want drought tolerant plants or native plants or plants that flower during different seasons. This application will take advantage of data from the USDA and the Trefle API for plants to return results based on plain english questions to the user about what kind of garden they would like to have._
 
 ## Setup/Installation Requirements
 
@@ -33,6 +37,14 @@ _Help a user decide which plants are best for their location (zip code) and cond
 | 1. Take in user input of their zip code to get the hardiness zone from our API | enter zip code 'example:97321' | 'Your Zip is 97321 and your zone is 8b which is a temperature range of 15 to 20°F' |
 | 2. Take in user answers to questionnaire for ```Create a plant list based on you and your zone!``` | enter submit with the ```ready for the wild``` answer| A list of plants that recognize that answer |
 | 3. click the tabs at top of screen | choose an option; example:```about``` | directs the browser to the ```about``` section at the bottom of the page |
+
+## UI/Design
+
+For the look and feel of this project we wanted to reference classic farm documents and the hippie feel of sustainability first established in the 60's and 70's. We framed our type treatment and layout as an easy to use survey that could service these complex botany definitions and practices into a resource for the average house plant love or urban farmer, but be powerful enough in the backend for someone looking to layout a full garden or agricultural space.
+
+![wireframe1](/assets/img/wireframe1.png)
+
+![wireframe2](/assets/img/wireframe2.png)
 
 
 ## Known Bugs
