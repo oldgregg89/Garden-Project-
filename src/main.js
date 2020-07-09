@@ -2,10 +2,10 @@ import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
 import $ from "jquery";
-import { ZipService } from "./../JS Business logic/plants.js";
+import { ZipService } from "./../JS Business logic/zipservice.js";
 import { PlantService } from "./../JS Business logic/plants.js";
 
-window.onscroll = function() {navBar()};
+window.onscroll = function () { navBar() };
 
 var navbar = document.getElementById("navbar");
 var sticky = navbar.offsetTop;
@@ -62,7 +62,7 @@ $(document).ready(function () {
     let life = $("#life").val();
     let shade = $("#shade").val();
     let durability = $("#durability").val();
-    
+
     (async () => {
       let plantsReturn = new PlantService();
       let plantsResponse = await plantsReturn.getPlant(
