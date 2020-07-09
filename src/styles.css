@@ -44,10 +44,34 @@ button:focus {
   outline: none;
 }
 
+.tablink {
+  float: left;
+  border: solid 2px #343a40;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #343a40;
+  color: whitesmoke;
+}
+
+.tabcontent {
+  padding-top: 16px;
+  text-align: center;
+}
+
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
+}
+
+.sticky + .tabcontent {
+  padding-top: 60px;
 }
 
 #content {
@@ -101,7 +125,7 @@ button:focus {
 }
 
 .tabcontent {
-  padding-top: 60px;
+  padding-top: 16px;
   text-align: center;
 }
 

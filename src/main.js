@@ -5,14 +5,14 @@ import $ from "jquery";
 import { ZipService } from "./../JS Business logic/plants.js";
 import { PlantService } from "./../JS Business logic/plants.js";
 
-window.onscroll = function() {myFunction()};
+window.onscroll = function() {navBar()};
 
 var navbar = document.getElementById("navbar");
 var sticky = navbar.offsetTop;
 
-function myFunction() {
+function navBar() {
   if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
+    navbar.classList.add("sticky");
   } else {
     navbar.classList.remove("sticky");
   }
@@ -92,11 +92,11 @@ $(document).ready(function () {
         let htmlInfo;
         for (let i = 0; i < plantsResponse.length; i++) {
           htmlInfo = `<a id="${plantsResponse[i].id}" href="#">                        
-                  <div class="card1">
-                  <h5 class="common-name">${plantsResponse[i].common_name}</h5>   
-                    <img class="card-img-top1" src="https://bs.floristic.org/image/o/${plantsResponse[i].images[0].url}" style="width: 9rem" alt="Card image cap">
-                    <p class="year-title">Drought :${plantsResponse[i].id}</p>
-                  </div>     
+              <div class="card1">
+              <h5 class="common-name">${plantsResponse[i].common_name}</h5>   
+                <img class="card-img-top1" src="https://bs.floristic.org/image/o/a135ee66843ed8f745e7cf627b91d369aa95d8ae" style="width: 9rem" alt="Card image cap">
+                <p class="year-title">Plant ID:${plantsResponse[i].id}</p>
+              </div>     
             </a>`;
           $('.plant-output').append(`${htmlInfo}`);
         }
@@ -104,8 +104,5 @@ $(document).ready(function () {
         $('.plant-output').text(`There was an error handling your request.`);
       }
     }
-
-
-
   });
 });

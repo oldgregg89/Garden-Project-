@@ -24,8 +24,8 @@ _Help a user decide which plants are best for their location (zip code) and cond
 | Behavior    | Input | Output |
 | :---------- | ----- | -----: |
 | 1. Take in user input of their zip code to get the hardiness zone from our API | enter zip code 'example:97321' | 'Your Zip is 97321 and your zone is 8b which is a temperature range of 15 to 20°F' |
-| 2. Take user input of certain plants they want to include | enter example 'tomato' | return 'garden tomato' |
-| 3.  |  |  |
+| 2. Take user input of certain plants they want to include | enter example 'tomato' | return ```garden tomato``` |
+| 3. click the tabs at top of screen | choose an option; example:```about``` | directs the browser to the ```about``` section at the bottom of the page |
 | behavior 4 |  |  |
 
 
