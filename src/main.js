@@ -2,7 +2,7 @@ import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
 import $ from "jquery";
-import { ZipService } from "./../JS Business logic/plants.js";
+import { ZipService } from "./../JS Business logic/zipservice.js";
 import { PlantService } from "./../JS Business logic/plants.js";
 
 window.onscroll = function() {navBar()};
@@ -65,29 +65,13 @@ $(document).ready(function () {
     
     (async () => {
       let plantsReturn = new PlantService();
-      let plantsResponse = await plantsReturn.getPlant(
-        containerProp,
-        flowers,
-        water,
-        life,
-        shade,
-        durability
-      );
+      let plantsResponse = await plantsReturn.getPlant(containerProp, flowers, water, life, shade, durability);
       showPlants(plantsResponse);
-      console.log(plantsResponse);
+      plantsReturn.getPrices(plantsResponse)
     })();
-
-    // function showPlants(plantsResponse) {
-    //   if (plantsResponse) {
-    //     $(".plant-output").text(
-    //       `Here is a list of plants ${plantsResponse[1].common_name}, ${plantsResponse[2].common_name}, ${plantsResponse[3].common_name}, ${plantsResponse[4].common_name}, ${plantsResponse[5].common_name}`
-    //     );
-    //   } else {
-    //     $(".plant-output").text(`Error`);
-    //   }
-    // }
-
+    
     function showPlants(plantsResponse) {
+      console.log("Response: ", plantsResponse);
       if (plantsResponse) {
         let htmlInfo;
         for (let i = 0; i < plantsResponse.length; i++) {
@@ -95,7 +79,7 @@ $(document).ready(function () {
               <div class="card1">
               <h5 class="common-name">${plantsResponse[i].common_name}</h5>   
                 <img class="card-img-top1" src="https://bs.floristic.org/image/o/a135ee66843ed8f745e7cf627b91d369aa95d8ae" style="width: 9rem" alt="Card image cap">
-                <p class="year-title">Plant ID:${plantsResponse[i].id}</p>
+                <p class="year-title">Plant ID: ${plantsResponse[i].id}</p>
               </div>     
             </a>`;
           $('.plant-output').append(`${htmlInfo}`);
