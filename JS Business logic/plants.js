@@ -1,4 +1,3 @@
-let assets = [];
 
 export class PlantService {
   async getPlant(containerProp, flowers, water, life, shade, durability) {
