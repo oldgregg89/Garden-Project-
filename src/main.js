@@ -74,18 +74,7 @@ $(document).ready(function () {
         durability
       );
       showPlants(plantsResponse);
-      console.log(plantsResponse);
     })();
-
-    // function showPlants(plantsResponse) {
-    //   if (plantsResponse) {
-    //     $(".plant-output").text(
-    //       `Here is a list of plants ${plantsResponse[1].common_name}, ${plantsResponse[2].common_name}, ${plantsResponse[3].common_name}, ${plantsResponse[4].common_name}, ${plantsResponse[5].common_name}`
-    //     );
-    //   } else {
-    //     $(".plant-output").text(`Error`);
-    //   }
-    // }
 
     function showPlants(plantsResponse) {
       if (plantsResponse) {
@@ -93,9 +82,8 @@ $(document).ready(function () {
         for (let i = 0; i < plantsResponse.length; i++) {
           htmlInfo = `<a id="${plantsResponse[i].id}" href="#">                        
               <div class="card1">
-              <h5 class="common-name">${plantsResponse[i].common_name}</h5>   
-                <img class="card-img-top1" src="https://bs.floristic.org/image/o/a135ee66843ed8f745e7cf627b91d369aa95d8ae" style="width: 9rem" alt="Card image cap">
-                <p class="year-title">Plant ID:${plantsResponse[i].id}</p>
+              <h5 class="common-name">${plantsResponse[i].common_name}</h5>
+                <p class="year-title">Scientific Name: ${plantsResponse[i].scientific_name}</p>
               </div>     
             </a>`;
           $('.plant-output').append(`${htmlInfo}`);
