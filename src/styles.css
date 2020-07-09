@@ -1,6 +1,11 @@
 body {
   background-image: url(https://images.pexels.com/photos/113335/pexels-photo-113335.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-image: scroll;
   background-color: whitesmoke;
+  position: relative; 
   color: black;
   font-family: 'Merriweather', serif;
 }
@@ -27,14 +32,25 @@ h2 {
   max-height: 100%;
 }
 
+#navbar {
+  margin-bottom: 75px;
+}
+
+.container {
+  margin-bottom: 10px;
+}
+
 button:focus { 
   outline: none;
-  background-color: #343a40;
-  color: whitesmoke;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 #content {
-  margin-top: 6%;
   margin-bottom: 3%;
   padding: 2%;
   background-color: rgba(245, 245, 245, 0.74);
@@ -65,10 +81,13 @@ button:focus {
   clear: both;
 }
 
+#topnav {
+  margin-top: 0px;
+}
+
 .tablink {
-  background-color: rgba(245, 245, 245, 0.74);
   float: left;
-  border: solid 1px #343a40;
+  border: solid 2px #343a40;
   border-radius: 10px;
   cursor: pointer;
   padding: 14px 16px;
@@ -82,8 +101,7 @@ button:focus {
 }
 
 .tabcontent {
-  display: none;
-  padding: 50px;
+  padding-top: 60px;
   text-align: center;
 }
 

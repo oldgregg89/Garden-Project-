@@ -10,27 +10,26 @@
   <title>HOME TEEM</title>
 </head>
 <body>
-  <div class="container" id="myHeader">
+  <div class="container">
     <img id="icon" src="https://d338t8kmirgyke.cloudfront.net/icons/icon_pngs/000/003/089/original/sprout.png">
     <h1>HOME TEEM</h1>
-    <h1></h1>
     <h2>We're rooting for you!</h2>
-    <br>
-    <button id="buttonAbout" class="tablink">About</button>
-    <button id="buttonResources" class="tablink">Resources</button>
-    <button id="buttonDefinitions" class="tablink">Definitions</button>
-    <button id="buttonSavedLists" class="tablink">Lists</button>
   </div>
+  <div id="navbar">
+    <div class="container" id="topnav">
+      <a href="#about"><button class="tablink">About</button></a>
+      <a href="#resources"><button class="tablink">Resources</button></a>
+      <a href="#definitions"><button class="tablink">Definitions</button></a>
+      <a href="#savedLists"><button class="tablink">Lists</button></a>
+    </div>
+  </div>
+  </nav>
   <div class="container" id="content">
         <h3>Find Your USDA Hardiness Zone</h3>
           <form id="area">
-              <label for="zip-code">Enter your Zip Code:</label>
-              <div class="input-group mb-3">
-                <input type="text" class="form-control" id="zip-code">
-                <div class="input-group-append">
-                  <button id="zip-btn" class="btn btn-dark" type="button">SUBMIT</button>
-                </div>
-              </div>
+              <label for="zip-code">Enter your Zip Code:</label><br>
+                <input type="text" class="form-control" id="zip-code"><br>
+                  <li id="zip-btn" class="btn btn-dark" type="li">Submit</li>
           </form>
           <div id="showZip"></div>
           <div id="show-plants"></div>
@@ -68,15 +67,15 @@
           <option value="moderate">We want to live here awhile.</option>
           <option value="long">This is our forever home.</option>
         </select>
-        <!-- Shade Tolerance -->
+        <!-- Shade Tperance -->
         <label>How much shade do you have near the area you are planting?</label>
         <select id="shade" class="form-control">
           <option>Choose...</option>
-          <option value="tolerant">Lots of shade</option>    
+          <option value="tperant">Lots of shade</option>    
           <option value="intermediate">Even sun to shade</option>
-          <option value="intolerant">Full sun all day</option>
+          <option value="intperant">Full sun all day</option>
         </select>
-        <!-- Drought Tolerance -->
+        <!-- Drought Tperance -->
         <label>How durable do you want these plants to be?</label>
         <select id="durability" class="form-control">
           <option>Choose...</option>
@@ -85,24 +84,23 @@
           <option value="medium">Pretty chill</option>
           <option value="high">Chilling hard</option>
         </select>
-        <button id="plant-btn" class="btn btn-dark" type="button">SUBMIT</button>
-        <button id="saveList-btn" class="btn btn-dark" type="button">Save List</button>
+        <li id="plant-btn" class="btn btn-dark" type="li">Submit</li>
+        <li id="saveList-btn" class="btn btn-dark" type="li">Save List</li>
       </form>  
-      </div>
       <div class="plant-output"></div>
       <div id="about" class="tabcontent">
         <h2>About</h2>
-        <p>This Application helps a user decide which plants are best for their location (zip code) and condition (soil type, shade, direction of sun, water frequency). They will be able to choose if they want drought tolerant plants or native plants or plants that flower during different seasons. This application will take advantage of data from the USDA and the Trefle API for plants to return results based on plain english questions to the user about what kind of garden they would like to have.</p>
+        <p>This Application helps a user decide which plants are best for their location (zip code) and condition (soil type, shade, direction of sun, water frequency). They will be able to choose if they want drought tperant plants or native plants or plants that flower during different seasons. This application will take advantage of data from the USDA and the Trefle API for plants to return results based on plain english questions to the user about what kind of garden they would like to have.</p>
       </div>
       <div id="resources" class="tabcontent">
         <h2>Resources</h2>
-        <ol><a href="https://www.uidaho.edu/-/media/UIdaho-Responsive/Files/Extension/county/Clearwater/Workshops/Timber-Sale-Handouts/Estimating-Soil-Moisture-by-Feel-and-Appearance.pdf?la=en&hash=2C00A79F2DC5B759F3E1D48373725CA88791D315#:~:text=Wet%2C%20forms%20a%20ball%2C%20uneven,on%20fingers%2C%20slick%20and%20sticky.">Check watering cycles (finger method)</a></ol>
-        <ol><a href="https://www.uidaho.edu/-/media/UIdaho-Responsive/Files/Extension/county/Clearwater/Workshops/Timber-Sale-Handouts/Estimating-Soil-Moisture-by-Feel-and-Appearance.pdf?la=en&hash=2C00A79F2DC5B759F3E1D48373725CA88791D315#:~:text=Wet%2C%20forms%20a%20ball%2C%20uneven,on%20fingers%2C%20slick%20and%20sticky.">Prune plants</a></ol>
-        <ol><a href="https://mahtabrasheed.wordpress.com/2012/11/14/steps-a-farmer-performs-and-what-information-is-required-at-each-step/">Understand crop cycles</a></ol>
-        <ol><a href="https://www.soils4teachers.org/chemistry">Understand soil compounds</a></ol>
-        <ol><a href="https://www.lsuagcenter.com/articles/connected/layering-in-soils">Creating soil layering</a></ol>
-        <ol><a href="https://youtu.be/MBIYebUgVVI">Creating raised beds</a></ol>
-        <ol><a href="https://aeroponicsdiy.com/stages-of-plant-growth/">Understand grow cycles</a></ol>
+        <p><a href="https://www.uidaho.edu/-/media/UIdaho-Responsive/Files/Extension/county/Clearwater/Workshops/Timber-Sale-Handouts/Estimating-Soil-Moisture-by-Feel-and-Appearance.pdf?la=en&hash=2C00A79F2DC5B759F3E1D48373725CA88791D315#:~:text=Wet%2C%20forms%20a%20ball%2C%20uneven,on%20fingers%2C%20slick%20and%20sticky.">Check watering cycles (finger method)</a></p>
+        <p><a href="https://www.uidaho.edu/-/media/UIdaho-Responsive/Files/Extension/county/Clearwater/Workshops/Timber-Sale-Handouts/Estimating-Soil-Moisture-by-Feel-and-Appearance.pdf?la=en&hash=2C00A79F2DC5B759F3E1D48373725CA88791D315#:~:text=Wet%2C%20forms%20a%20ball%2C%20uneven,on%20fingers%2C%20slick%20and%20sticky.">Prune plants</a></p>
+        <p><a href="https://mahtabrasheed.wordpress.com/2012/11/14/steps-a-farmer-performs-and-what-information-is-required-at-each-step/">Understand crop cycles</a></p>
+        <p><a href="https://www.soils4teachers.org/chemistry">Understand soil compounds</a></p>
+        <p><a href="https://www.lsuagcenter.com/articles/connected/layering-in-soils">Creating soil layering</a></p>
+        <p><a href="https://youtu.be/MBIYebUgVVI">Creating raised beds</a></p>
+        <p><a href="https://aeroponicsdiy.com/stages-of-plant-growth/">Understand grow cycles</a></p>
       </div>
       <div id="savedLists" class="tabcontent">
         <h2>Saved Lists</h2>
@@ -111,18 +109,18 @@
       </div>
       <div id="definitions" class="tabcontent">
         <h2>Definitions</h2>
-        <h5>Drought Tolerant</h5>
-          <p>Drought tolerance is the ability to which a plant maintains its biomass production during arid or drought conditions. Some plants are naturally adapted to dry conditions, surviving with protection mechanisms such as desiccation tolerance, detoxification, or repair of xylem embolism.</p>
+        <h5>Drought Tperant</h5>
+          <p>Drought tperance is the ability to which a plant maintains its biomass production during arid or drought conditions. Some plants are naturally adapted to dry conditions, surviving with protection mechanisms such as desiccation tperance, detoxification, or repair of xylem embpism.</p>
         <h5>Native Plants</h5>
-          <p>Native plants are plants indigenous to a given area in geologic time. This includes plants that have developed, occur naturally, or existed for many years in an area.</p>
+          <p>Native plants are plants indigenous to a given area in gepogic time. This includes plants that have developed, occur naturally, or existed for many years in an area.</p>
         <h5>Attracting</h5>
-          <p>Most plants depend on pollinators to move the pollen from one flower to the next, while others rely on wind or water to move pollen. Plants produce nectar to attract pollinators. As the pollinator moves from flower to flower collecting nectar, they are also moving pollen from flower to flower.</p>
+          <p>Most plants depend on pplinators to move the pplen from one flower to the next, while others rely on wind or water to move pplen. Plants produce nectar to attract pplinators. As the pplinator moves from flower to flower cplecting nectar, they are also moving pplen from flower to flower.</p>
         <h5>Frost Resistant Plants</h5>
-          <p>Frost plants are tolerant of light freezes and can usually withstand such temperatures without serious physical injury. Non-hardy plants and frost can damage tender green tissues or even kill the root system.</p>
+          <p>Frost plants are tperant of light freezes and can usually withstand such temperatures without serious physical injury. Non-hardy plants and frost can damage tender green tissues or even kill the root system.</p>
         <h5>Fruit Bearing Plants</h5>
           <p>Fruit-bearing plants are the glory of the garden. Not only do they add beauty to the landscape, but they also produce edible fruits. Fruits, by definition, are edible crops containing seeds, and they include berries, grapes, tree fruits, melons and even some crops usually thought of as vegetables.</p>
-        <h5>Shade Tolerant</h5>
-          <p>In ecology, shade tolerance refers to a plant's ability to tolerate low light levels. The term is also used in horticulture and landscaping, although in this context its use is sometimes imprecise, especially in labeling of plants for sale in commercial nurseries.</p>
+        <h5>Shade Tperant</h5>
+          <p>In ecpogy, shade tperance refers to a plant's ability to tperate low light levels. The term is also used in horticulture and landscaping, although in this context its use is sometimes imprecise, especially in labeling of plants for sale in commercial nurseries.</p>
       </div>
     </div>  
   </body>

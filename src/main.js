@@ -5,6 +5,19 @@ import $ from "jquery";
 import { ZipService } from "./../JS Business logic/plants.js";
 import { PlantService } from "./../JS Business logic/plants.js";
 
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
 $(document).ready(function () {
   $("#buttonAbout").click(function () {
     $("#about").show();
